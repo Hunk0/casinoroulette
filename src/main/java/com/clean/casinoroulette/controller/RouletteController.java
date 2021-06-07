@@ -43,7 +43,8 @@ public class RouletteController {
                 bet.setUserId(userId);
                 if((numberBet) ? (Integer.parseInt(bet.getValue()) < 0 || Integer.parseInt(bet.getValue()) > 36) : !(bet.getValue().equals("negro") || bet.getValue().equals("rojo")))
                     return ResponseEntity.status(400).contentType(MediaType.APPLICATION_JSON).body("{\"message\": \"Esta apuesta no es valida\"}");
-
+                if(bet.getCash() < 1 || bet.getCash() > 10000) return ResponseEntity.status(400).contentType(MediaType.APPLICATION_JSON).body("{\"message\": \"Esta apuesta no es valida\"}");
+                
                 return new ResponseEntity<>(betReRepository.save(bet), HttpStatus.CREATED);
             }
 

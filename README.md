@@ -7,7 +7,7 @@ A rulette game REST API made with Java(Spring Framework) and MySql. First find t
     <br>
     Method : `POST`	
     <br>
-    Response example :
+    Response body example :
 
     {
         "rouletteId": 12,
@@ -22,7 +22,7 @@ A rulette game REST API made with Java(Spring Framework) and MySql. First find t
     <br>
     Method : `PUT`
     <br>
-    Response example :     
+    Response body example :     
 
     {
         "message": "La ruleta esta abierta, hagan sus apuestas!"
@@ -42,7 +42,15 @@ A rulette game REST API made with Java(Spring Framework) and MySql. First find t
           <li>'value' property can be a number as string within 0 and 36 or color text ("negro" o "rojo")..</li>
       </ul>
     <br>
-    Response example :     
+    Request body example : 
+    <pre>
+    {
+        "value" : "36",
+        "cash": "3000"
+    }
+    </pre>
+    <br>
+    Response body example :     
 
     {
         "betId": 8,
@@ -58,7 +66,7 @@ A rulette game REST API made with Java(Spring Framework) and MySql. First find t
     <br>
     Method : `PUT`
     <br>
-    Response example :     
+    Response body example :     
 
     {
         "message": "La ruleta se ha cerrado... El numero ganador ha sido el 9(color negro), gracias por participar!",
@@ -85,7 +93,7 @@ A rulette game REST API made with Java(Spring Framework) and MySql. First find t
     <br>
     Method : `GET`
     <br>
-    Response example :     
+    Response body example :     
 
     [
         {
