@@ -80,7 +80,7 @@ A rulette game REST API made with Java(Spring Framework) and MySql. First find t
 </details>
 
 <details>
-	<summary>3. Roulette list</summary>
+	<summary>5. Roulette list</summary>
 	URL : `/roulettes/{id}/bet`
     <br>
     Method : `GET`
