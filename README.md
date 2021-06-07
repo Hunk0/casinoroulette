@@ -1,12 +1,13 @@
 # Casino Roulette API
+A rulette game REST API made with Java(Spring Framework) and MySql. First find the file 'application.properties' and set your own properties or you can set the environment variables as indicated.
 ### Endpoints:
 <details>
 <summary>1. Roulette creator</summary>
-	**URL** : `/roulettes/newroulette`
+	URL : `/roulettes/newroulette`
     <br>
-    **Method** : `POST`	
+    Method : `POST`	
     <br>
-    **Response example** :
+    Response example :
 
     {
         "rouletteId": 12,
@@ -17,11 +18,11 @@
 
 <details>
 	<summary>2. Open roulette</summary>
-	**URL** : `/roulettes/{id}/open`
+	URL : `/roulettes/{id}/open`
     <br>
-    **Method** : `PUT`
+    Method : `PUT`
     <br>
-    **Response example** :     
+    Response example :     
 
     {
         "message": "La ruleta esta abierta, hagan sus apuestas!"
@@ -30,18 +31,18 @@
 
 <details>
 	<summary>3. Make bet</summary>
-	**URL** : `/roulettes/{id}/bet`
+	URL : `/roulettes/{id}/bet`
     <br>
-    **Method** : `POST`
+    Method : `POST`
     <br>
-    **Notes** : 
+    Notes : 
     <br/>
       <ul>
           <li>This Endpoint requires a 'userId' HEADER with a number in it.</li>
           <li>'value' property can be a number as string within 0 and 36 or color text ("negro" o "rojo")..</li>
       </ul>
     <br>
-    **Response example** :     
+    Response example :     
 
     {
         "betId": 8,
@@ -53,11 +54,11 @@
 
 <details>
 	<summary>4. Close roulette</summary>
-	**URL** : `/roulettes/{id}/close`
+	URL : `/roulettes/{id}/close`
     <br>
-    **Method** : `PUT`
+    Method : `PUT`
     <br>
-    **Response example** :     
+    Response example :     
 
     {
         "message": "La ruleta se ha cerrado... El numero ganador ha sido el 9(color negro), gracias por participar!",
@@ -80,11 +81,11 @@
 
 <details>
 	<summary>3. Roulette list</summary>
-	**URL** : `/roulettes/{id}/bet`
+	URL : `/roulettes/{id}/bet`
     <br>
-    **Method** : `GET`
+    Method : `GET`
     <br>
-    **Response example** :     
+    Response example :     
 
     [
         {
